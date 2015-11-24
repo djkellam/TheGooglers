@@ -7,6 +7,7 @@
 #include "Animation/AnimInstance.h"
 #include "Net/UnrealNetwork.h"
 #include "GameFramework/InputSettings.h"
+#include "FPS_MultiplayerGameMode.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -47,6 +48,15 @@ AFPS_MultiplayerCharacter::AFPS_MultiplayerCharacter()
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+void AFPS_MultiplayerCharacter::BeginPlay()
+{
+    AFPS_MultiplayerGameMode* GameMode = Cast<AFPS_MultiplayerGameMode>(GetWorld()->GetAuthGameMode());
+    if(GameMode)
+    {
+        GameMode->PlayerList.Add(this);
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////

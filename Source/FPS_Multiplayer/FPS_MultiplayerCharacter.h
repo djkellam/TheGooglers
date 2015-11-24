@@ -19,6 +19,8 @@ class AFPS_MultiplayerCharacter : public ACharacter
 	class UCameraComponent* FirstPersonCameraComponent;
 public:
 	AFPS_MultiplayerCharacter();
+    
+    virtual void BeginPlay() override;
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)

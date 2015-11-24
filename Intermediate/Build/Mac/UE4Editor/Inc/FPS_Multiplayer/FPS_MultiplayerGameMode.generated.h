@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_MULTIPLAYER_FPS_MultiplayerGameMode_generated_h
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_RPC_WRAPPERS
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_INCLASS_NO_PURE_DECLS \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_RPC_WRAPPERS
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesAFPS_MultiplayerGameMode(); \
 	friend FPS_MULTIPLAYER_API class UClass* Z_Construct_UClass_AFPS_MultiplayerGameMode(); \
@@ -23,10 +23,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_CLASS(AFPS_MultiplayerGameMode, AGameMode, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), 0, FPS_Multiplayer, FPS_MULTIPLAYER_API) \
 	DECLARE_SERIALIZER(AFPS_MultiplayerGameMode) \
 	/** Indicates whether the class is compiled into the engine */    enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
-	virtual UObject* _getUObject() const override { return const_cast<AFPS_MultiplayerGameMode*>(this); }
+	virtual UObject* _getUObject() const override { return const_cast<AFPS_MultiplayerGameMode*>(this); } \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_INCLASS \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_INCLASS \
 	private: \
 	static void StaticRegisterNativesAFPS_MultiplayerGameMode(); \
 	friend FPS_MULTIPLAYER_API class UClass* Z_Construct_UClass_AFPS_MultiplayerGameMode(); \
@@ -34,10 +35,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_CLASS(AFPS_MultiplayerGameMode, AGameMode, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), 0, FPS_Multiplayer, FPS_MULTIPLAYER_API) \
 	DECLARE_SERIALIZER(AFPS_MultiplayerGameMode) \
 	/** Indicates whether the class is compiled into the engine */    enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
-	virtual UObject* _getUObject() const override { return const_cast<AFPS_MultiplayerGameMode*>(this); }
+	virtual UObject* _getUObject() const override { return const_cast<AFPS_MultiplayerGameMode*>(this); } \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_STANDARD_CONSTRUCTORS \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	FPS_MULTIPLAYER_API AFPS_MultiplayerGameMode(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPS_MultiplayerGameMode) \
@@ -49,7 +51,7 @@ private: \
 public:
 
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_ENHANCED_CONSTRUCTORS \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private copy-constructor, should never be used */ \
 	FPS_MULTIPLAYER_API AFPS_MultiplayerGameMode(const AFPS_MultiplayerGameMode& InCopy); \
@@ -59,23 +61,23 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPS_MultiplayerGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPS_MultiplayerGameMode)
 
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_6_PROLOG
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_GENERATED_BODY_LEGACY \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_7_PROLOG
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_RPC_WRAPPERS \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_INCLASS \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_STANDARD_CONSTRUCTORS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_RPC_WRAPPERS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_INCLASS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_POP
 
 
-#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_GENERATED_BODY \
+#define FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_INCLASS_NO_PURE_DECLS \
-	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_9_ENHANCED_CONSTRUCTORS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_INCLASS_NO_PURE_DECLS \
+	FPS_Multiplayer_Source_FPS_Multiplayer_FPS_MultiplayerGameMode_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_POP
 
