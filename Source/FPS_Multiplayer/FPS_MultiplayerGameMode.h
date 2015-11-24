@@ -1,6 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/GameMode.h"
+#include "FPS_MultiplayerCharacter.h"
 #include "FPS_MultiplayerGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -12,6 +13,12 @@ public:
 	AFPS_MultiplayerGameMode();
     
     virtual void Tick(float DeltaSeconds) override;
+        
+    TArray<AFPS_MultiplayerCharacter*> PlayerList;
+    
+    UPROPERTY(Replicated)
+    bool LastManStanding;
+    
 };
 
 

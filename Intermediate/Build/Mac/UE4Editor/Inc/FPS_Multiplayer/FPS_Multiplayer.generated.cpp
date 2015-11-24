@@ -21,11 +21,11 @@ void EmptyLinkFunctionForGeneratedCodeFPS_Multiplayer() {}
 	void AFPS_MultiplayerGameMode::StaticRegisterNativesAFPS_MultiplayerGameMode()
 	{
 	}
-	IMPLEMENT_CLASS(AFPS_MultiplayerGameMode, 510912563);
+	IMPLEMENT_CLASS(AFPS_MultiplayerGameMode, 3102397667);
 	void AFPS_MultiplayerHUD::StaticRegisterNativesAFPS_MultiplayerHUD()
 	{
 	}
-	IMPLEMENT_CLASS(AFPS_MultiplayerHUD, 2415436652);
+	IMPLEMENT_CLASS(AFPS_MultiplayerHUD, 975695854);
 	void AFPS_MultiplayerProjectile::ServerOnHit(AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 	{
 		FPS_MultiplayerProjectile_eventServerOnHit_Parms Parms;
@@ -53,6 +53,7 @@ FName FPS_MULTIPLAYER_ServerOnHit = FName(TEXT("ServerOnHit"));
 	ENGINE_API class UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
+	ENGINE_API class UClass* Z_Construct_UClass_UFont_NoRegister();
 	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
@@ -180,6 +181,10 @@ PRAGMA_POP
 				OuterClass->ClassFlags |= 0x2088028C;
 
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(LastManStanding, AFPS_MultiplayerGameMode, bool);
+				UProperty* NewProp_LastManStanding = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("LastManStanding"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(LastManStanding, AFPS_MultiplayerGameMode), 0x0000000000000020, CPP_BOOL_PROPERTY_BITMASK(LastManStanding, AFPS_MultiplayerGameMode), sizeof(bool), true);
+PRAGMA_POP
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -188,6 +193,7 @@ PRAGMA_POP
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("FPS_MultiplayerGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("FPS_MultiplayerGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_LastManStanding, TEXT("ModuleRelativePath"), TEXT("FPS_MultiplayerGameMode.h"));
 #endif
 			}
 		}
@@ -214,6 +220,9 @@ PRAGMA_POP
 				OuterClass->ClassFlags |= 0x2080028C;
 
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_HUDFont = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("HUDFont"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(HUDFont, AFPS_MultiplayerHUD), 0x0000000000000000, Z_Construct_UClass_UFont_NoRegister());
+PRAGMA_POP
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -222,6 +231,8 @@ PRAGMA_POP
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("FPS_MultiplayerHUD.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("FPS_MultiplayerHUD.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_HUDFont, TEXT("ModuleRelativePath"), TEXT("FPS_MultiplayerHUD.h"));
+				MetaData->SetValue(NewProp_HUDFont, TEXT("ToolTip"), TEXT("Variable for storing the font"));
 #endif
 			}
 		}
@@ -337,7 +348,7 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/FPS_Multiplayer")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x523FBAA6;
+			Guid.A = 0x3027ACCE;
 			Guid.B = 0x4D677FA0;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

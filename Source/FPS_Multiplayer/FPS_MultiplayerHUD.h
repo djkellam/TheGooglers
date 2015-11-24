@@ -13,10 +13,19 @@ public:
 
 	/** Primary draw call for the HUD */
 	virtual void DrawHUD() override;
+    
+    /*UFUNCTION(Reliable, Server, WithValidation)
+    void DrawHUDServer();
+    void DrawHUDServer_Implementation();
+    bool DrawHUDServer_Validate();*/
 
 private:
 	/** Crosshair asset pointer */
 	class UTexture2D* CrosshairTex;
+    
+    //Variable for storing the font
+    UPROPERTY()
+    UFont * HUDFont;
 
 };
 
