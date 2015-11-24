@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BuildReceipt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Properties>
+    <Property Name="TargetName" Value="FPS_MultiplayerEditor" />
+    <Property Name="Platform" Value="Mac" />
+    <Property Name="Configuration" Value="DebugGame" />
+    <Property Name="Precompile" Value="False" />
+  </Properties>
+  <BuildProducts>
+    <BuildProduct Path="$(ProjectDir)/Binaries/Mac/UE4Editor-FPS_Multiplayer-5213-Mac-DebugGame.dylib" Type="DynamicLibrary" />
+  </BuildProducts>
+  <RuntimeDependencies />
+  <bRequireDependenciesToExist>true</bRequireDependenciesToExist>
+</BuildReceipt>
